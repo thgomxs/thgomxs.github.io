@@ -609,7 +609,7 @@ main {
 
         @media (max-width: 480px) {
             html {
-                font-size: 46.5%;
+                font-size: 46.7%;
             }
             #home-container #side-icons #side-icons-buttons button {
                 width: calc(211px - 14.5%);

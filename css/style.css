@@ -395,6 +395,7 @@ main {
     position: relative;
     background-color: var(--secondary-bg);
     overflow: hidden;
+    max-height: 250px;
     border-radius: 10px;
     transition: 500ms;
 }
@@ -513,6 +514,12 @@ main {
     #about-section {
         padding: 15rem 0rem;
         height: fit-content;
+    }
+    #about-container {
+        height: auto;
+    }
+    #about-text {
+        margin-bottom: 5rem;
     }
 
     .academic-background-box p {

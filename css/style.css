@@ -292,6 +292,11 @@ main {
     background-color: var(--secondary-bg);
     margin-right: 20px;
     border-radius: 50%;
+    transition: 500ms;
+}
+#about-text-icons i:hover {
+    cursor: pointer;
+    background-color: #284c8f;
 }
 
 #about-skills {

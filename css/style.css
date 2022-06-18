@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 :root {
@@ -29,7 +29,7 @@ li {
     list-style: none;
 }
 body {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
     background-color: var(--primary-bg);
 }
@@ -87,7 +87,7 @@ html {
     justify-content: center;
     align-items: flex-start;
     width: 80%;
-    height: 100vh;
+
     flex-direction: column;
 }
 
@@ -107,7 +107,7 @@ main {
     z-index: 10;
     width: 100vw;
     height: 55px;
-    background-color: #101013;
+    background-color: var(--light-blue);
     box-shadow: 1px 1px 10px 2px black;
     transition: 800ms;
 }
@@ -127,13 +127,16 @@ main {
     color: white;
     justify-content: space-between;
     width: 80%;
+    z-index: 2;
     height: fit-content;
 }
 
 #header-mobile-navbar {
     width: 100%;
-    position: absolute;
-    top: 120px;
+    opacity: 0%;
+    position: relative;
+    top: 30px;
+    transition: 750ms;
 }
 #header-mobile-navbar li {
     width: 80%;
@@ -221,7 +224,8 @@ main {
     margin-top: 25px;
     padding: 5px;
     border-radius: 10px;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(66deg) brightness(103%) contrast(102%) drop-shadow(4px 4px 10px black);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(66deg) brightness(103%) contrast(102%)
+        drop-shadow(4px 4px 10px black);
 }
 
 /*------------ SIDE SECTION END ------------*/
@@ -240,7 +244,11 @@ main {
     background-color: var(--primary-bg);
     position: relative;
     width: 100%;
-    height: 100vh;
+    padding: 10rem 0rem;
+}
+
+#about-container {
+    gap: 15rem;
 }
 
 #about-text {
@@ -381,14 +389,14 @@ main {
     border-top: 1px dashed rgb(99, 99, 102);
     background-color: var(--primary-bg);
     width: 100%;
-    height: 100vh;
+    padding: 10rem 0rem;
 }
 
 #projects-content {
     display: grid;
     width: 100%;
     align-items: center;
-
+    height: auto;
     grid-template-columns: repeat(auto-fit, minmax(auto, 500px));
     gap: 15px;
 }
@@ -467,6 +475,7 @@ main {
 
 #projects-github-btn {
     width: 100%;
+    justify-content: flex-start;
 }
 #projects-github-btn button {
     padding: 18px 20px;
@@ -491,12 +500,12 @@ main {
 /*-------------------------------MAIN END------------------------------------------*/
 
 /*---------------------------MEDIA QUIRE----------------------------*/
-@media (min-width: 1281px) {
+@media (max-width: 1281px) {
     html {
-        font-size: 55.5%;
+        font-size: 50.5%;
     }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1150px) {
     html {
         font-size: 55.5%;
     }
@@ -514,6 +523,9 @@ main {
     }
     #header-mobile.mobile-btn-active {
         height: 250px;
+    }
+    #header-mobile-navbar.mobile-btn-active {
+        opacity: 100%;
     }
 
     #about-section {
